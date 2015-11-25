@@ -12,6 +12,35 @@ include(cmake/Misc.cmake)
 include(cmake/Summary.cmake)
 include(cmake/ConfigGen.cmake)
 
+set(CUDA_TOOLKIT_ROOT_DIR /storage/plzen1/home/hudler/cuda-7.0/)
+set(GFLAGS_INCLUDE_DIR /storage/plzen1/home/gogartom/gflags/installation/include)
+set(GFLAGS_LIBRARY /storage/plzen1/home/gogartom/gflags/installation/lib/libgflags.a)
+set(GLOG_INCLUDE_DIR /storage/plzen1/home/gogartom/glog-0.3.3/installation/include)
+set(GLOG_LIBRARY /storage/plzen1/home/gogartom/glog-0.3.3/installation/lib/libglog.so)
+
+set(PROTOBUF_INCLUDE_DIR /storage/plzen1/home/gogartom/protobuf-2.6/installation/include)
+set(PROTOBUF_LIBRARY /storage/plzen1/home/gogartom/protobuf-2.6/installation/lib/libprotobuf.so)
+set(PROTOBUF_PROTOC_EXECUTABLE /storage/plzen1/home/gogartom/protobuf-2.6/installation/bin/protoc)
+
+set(LMDB_INCLUDE_DIR /storage/plzen1/home/gogartom/lmdb/libraries/liblmdb/installation/include)
+set(LMDB_LIBRARIES /storage/plzen1/home/gogartom/lmdb/libraries/liblmdb/installation/lib/liblmdb.so)
+set(LevelDB_INCLUDE /storage/plzen1/home/gogartom/leveldb/include)
+set(LevelDB_LIBRARY /storage/plzen1/home/gogartom/leveldb/libleveldb.so)
+
+set(Snappy_LIBRARIES /storage/plzen1/home/gogartom/snappy/installation/lib/libsnappy.so)
+set(Snappy_INCLUDE_DIR /storage/plzen1/home/gogartom/snappy/installation/include)
+
+set(Atlas_CBLAS_INCLUDE_DIR /afs/.ics.muni.cz/software/atlas-3.10.1/gcc4.7.0/include)
+set(Atlas_CBLAS_LIBRARY /afs/.ics.muni.cz/software/atlas-3.10.1/gcc4.7.0/lib/libcblas.a)
+set(Atlas_CLAPACK_INCLUDE_DIR /afs/.ics.muni.cz/software/atlas-3.10.1/gcc4.7.0/include)
+set(Atlas_LAPACK_LIBRARY /afs/.ics.muni.cz/software/atlas-3.10.1/gcc4.7.0/lib/liblapack.a)
+set(Atlas_BLAS_LIBRARY /afs/.ics.muni.cz/software/atlas-3.10.1/gcc4.7.0/lib/libatlas.a)
+
+set(PYTHON_LIBRARY /software/python-2.7.6/gcc/lib/libpython2.7.so)
+set(PYTHON_INCLUDE_DIR /software/python-2.7.6/gcc/include/python2.7)
+set(Boost_INCLUDE_DIR /storage/plzen1/home/gogartom/boost_py_2.7.6/installation/include)
+
+
 # ---[ Options
 caffe_option(CPU_ONLY  "Build Caffe wihtout CUDA support" OFF) # TODO: rename to USE_CUDA
 caffe_option(USE_CUDNN "Build Caffe with cuDNN libary support" ON IF NOT CPU_ONLY)
